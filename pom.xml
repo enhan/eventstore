@@ -11,7 +11,7 @@
 
     <properties>
         <maven.compiler.source>1.7</maven.compiler.source>
-        <maven.compiler.version>1.7</maven.compiler.version>
+        <maven.compiler.target>1.7</maven.compiler.target>
         <maven.compiler.encoding>UTF-8</maven.compiler.encoding>
 
         <!-- Versions -->
