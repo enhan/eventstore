@@ -3,11 +3,23 @@
     <div class="span10 offset1">
         <form>
             <h2>What are your plans ?</h2>
-            <input type="checkbox" id="showDate" name="showDate" ng-model="knowDate"><label for="showDate">I know exactly the date of my event</label>
+            <label for="showDate" class="checkbox inline"><input type="checkbox" id="showDate" name="showDate" ng-model="knowDate">I know exactly the date of my event</label>
+            <h2>Basics</h2>
             <label for="name">Name :</label><input type="text" ng-model="name" id="name" placeholder="Name"/>
-            <label for="date" ng-show="knowDate">When ?</label><input ng-show="knowDate" type="text" ng-model="date" id="date">
             <label>Description</label>
             <textarea></textarea>
+            <h2>When ?</h2>
+
+            <label for="date" ng-show="knowDate">When ?</label><input ng-show="knowDate" type="text" ng-model="date" id="date">
+
+            <div ng-hide="knowDate">
+                <p>Add options to propose dates to your attendees !</p>
+                <div ng-repeat="opt in timeOptions">
+                   <label for="option{{$index}}" class="inline">Option {{$index+1}} : <input type="text" id="option{{$index}}" value="{{opt}}"/></label>
+                </div>
+                <button class="btn btn-primary" type="button">Add another option</button>
+            </div>
+
         </form>
     </div>
 </div>

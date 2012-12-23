@@ -18,6 +18,7 @@ function HomeCtrl(){
 }
 
 
-function EventNewCtrl(){
+function EventNewCtrl($scope){
+    $scope.timeOptions = ['opt', 'test'];
 
 }
