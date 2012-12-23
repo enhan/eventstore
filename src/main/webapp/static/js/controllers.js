@@ -26,7 +26,7 @@ function EventNewCtrl($scope){
 function SignupCtrl($scope, $http){
     $scope.successfullLogin = false;
     $scope.login = function (){
-        $http.get('/signup').success(function(data){
+        $http.get('/connect/facebook').success(function(data){
             $scope.successfullLogin = true;
         });
     }

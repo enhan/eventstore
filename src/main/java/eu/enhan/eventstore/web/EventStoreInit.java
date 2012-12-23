@@ -18,6 +18,9 @@ public class EventStoreInit implements WebApplicationInitializer {
 		rootContext.register(AppConfig.class);
 		servletContext.addListener(new ContextLoaderListener(rootContext));
 
+		AnnotationConfigWebApplicationContext socialContext = new AnnotationConfigWebApplicationContext();
+		socialContext.register(SocialConfig.class);
+
 		// Web context
 		AnnotationConfigWebApplicationContext webContext = new AnnotationConfigWebApplicationContext();
 		webContext.register(WebConfig.class);

@@ -87,6 +87,18 @@
             <version>${spring.core.version}</version>
         </dependency>
 
+        <!-- Data -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>3.2.0.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>2.2.9</version>
+        </dependency>
 
         <!-- Web -->
         <dependency>
@@ -96,6 +108,17 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- Social -->
+        <dependency>
+            <groupId>org.springframework.social</groupId>
+            <artifactId>spring-social-core</artifactId>
+            <version>1.0.2.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.social</groupId>
+            <artifactId>spring-social-facebook</artifactId>
+            <version>1.0.2.RELEASE</version>
+        </dependency>
 
         <!-- Test -->
         <dependency>
