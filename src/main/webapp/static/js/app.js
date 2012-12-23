@@ -10,6 +10,7 @@ angular.module('eventstore',[]).
     config(['$routeProvider', function($routeProvider){
     $routeProvider.
         when('/events',{templateUrl:'partials/event-list.html', controller: EventListCtrl}).
+        when('/events/new', {templateUrl:'partials/event-new.html', controller:EventNewCtrl}).
         when('/', {templateUrl:'partials/home.html', controller:HomeCtrl}).
         otherwise({redirectTo:'/'});
 

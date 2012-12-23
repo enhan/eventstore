@@ -16,3 +16,8 @@ function EventListCtrl(){
 function HomeCtrl(){
 
 }
+
+
+function EventNewCtrl(){
+
+}
