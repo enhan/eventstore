@@ -22,3 +22,12 @@ function EventNewCtrl($scope){
     $scope.timeOptions = ['opt', 'test'];
 
 }
+
+function SignupCtrl($scope, $http){
+    $scope.successfullLogin = false;
+    $scope.login = function (){
+        $http.get('/signup').success(function(data){
+            $scope.successfullLogin = true;
+        });
+    }
+}
