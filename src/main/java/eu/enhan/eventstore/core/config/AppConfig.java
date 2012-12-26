@@ -3,6 +3,7 @@ package eu.enhan.eventstore.core.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseFactory;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseType;
@@ -15,6 +16,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @ComponentScan(basePackages = {"eu.enhan.eventstore.core"}, excludeFilters = { @ComponentScan.Filter(Configuration.class) })
+@PropertySource("classpath:eu.enhan.eventstore.application.properties")
 public class AppConfig {
 
 	@Bean(destroyMethod = "shutdown")
